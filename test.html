@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        Demo
+    </div>
+    <input type="button" id="btn1" value="btn1" onclick="test1()">
+    <input type="button" id="btn2" value="btn2" onclick="test1()">
+    <input type="button" id="btn3" value="btn3">
+    <script>
+
+
+        document.getElementById("btn1").addEventListener("click", function() {
+            document.getElementById("demo").innerHTML = "Button 1 Clicked!";
+        });
+
+        document.querySelector("#btn2").addEventListener("click", function() {
+            document.getElementById("demo").innerHTML = "Button 2 Clicked!";
+        });
+
+        document.getElementById("btn3").onclick = function() {
+            document.getElementById("demo").innerHTML = "Button 3 Clicked!";
+        };
+
+        function test1() {
+            console.log("btn-click clicked");
+        }
+    </script>
+</body>
+</html>
