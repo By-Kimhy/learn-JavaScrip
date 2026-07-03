@@ -6,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Fetch API</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="menu-bar">
+        <div class="menu">
+            <ul></ul>
+        </div>
+    </div>
+    <!-- <div class="popup">
+        <div class="loading">
+            loaing...
+        </div>
+    </div> -->
     <input type="button" value="fetch" id="btn1">
-    
-    <script>
-        document.getElementById("btn1").addEventListener("click", function () {
-            getData();
-        });
-        async function getData() {
-            let url = "https://reanweb.com/api/teaching/get-menu.php";
-            const rp=await fetch(url);
-            const rs=await rp.json();
-            console.log(rs);
-        }
-    </script>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
