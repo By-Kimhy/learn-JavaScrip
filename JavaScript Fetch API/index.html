@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fetch API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="button" value="fetch" id="btn1">
+    
+    <script>
+        document.getElementById("btn1").addEventListener("click", function () {
+            getData();
+        });
+        async function getData() {
+            let url = "https://reanweb.com/api/teaching/get-menu.php";
+            const rp=await fetch(url);
+            const rs=await rp.json();
+            console.log(rs);
+        }
+    </script>
+</body>
+</html>
